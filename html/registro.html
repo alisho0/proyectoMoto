@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../styles/style1.css">
+    <link rel="stylesheet" href="../styles/styleLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="login">
+        <div class="login__cuadro">
+            <a class="login__cuadro--img" href="../index.html">
+                <img width="25" src="../img/vovler.png" alt="">
+            </a>
+            <h2>Registrate</h2>
+            <form class="login__datos">
+                <div class="login__datos-seccion">
+                    <label for="usuario">Correo electrónico</label>
+                    <input required id="usuario" type="email" placeholder="Correo">
+                </div>
+                <div class="login__datos-seccion">
+                    <label for="pass">Contraseña</label>
+                    <input required id="pass" type="password" placeholder="Contraseña">
+                </div>
+                    <input class="boton" type="submit" value="Registrarse">
+                <div class="login__enlaces">
+                    <div class="login__register">
+                            <p>¿Ya tienes cuenta?</p>
+                            <a class="login__enlaces--register" href="../html/login.html">Inicia Sesión</a>
+                    </div>
+                </div>    
+            </form>
+        </div>
+    </main>
+</body>
+</html>

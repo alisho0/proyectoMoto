@@ -1,0 +1,112 @@
+:root {
+    --negro: #001514;
+    --blanco: #FBFFFE;
+    --azulFuerte: #46B1C9;
+    --azulClaro: #84C0C6;
+    --gris: #9FB7B9;
+    --grisFondo: #BCC1BA;
+}
+
+h1, h2, h3, h4, h5, p, label, a {
+    color: var(--blanco);
+}
+.login {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/wallpaperlogin.jpg) no-repeat center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+
+.login__cuadro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.418);
+    width: 35rem;
+    height: 45rem;
+    border: 1px solid var(--azulFuerte);
+}
+
+.login__datos {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+.login__enlaces {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: .5rem;
+}
+.login__enlaces--register {
+    color: var(--azulFuerte);
+}
+
+.login__pass {
+    font-size: 1.2rem;
+}
+
+.login__datos-seccion {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.login__datos-seccion label {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    padding: 0 1rem;
+    color: var(--blanco);
+    background-color:#46b1c92a;
+    border-radius: .5rem;
+    height: 3rem;
+    border: none;
+}
+
+.boton {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 13rem;
+    margin: 0 auto;
+    background-color: var(--azulFuerte);
+    cursor: pointer;
+    height: 3.5rem;
+    border-radius: 1.1rem;
+    transition: .3s;
+    border: 2px solid var(--azulFuerte);
+    color: var(--negro);
+}
+
+.boton:hover {
+    color: var(--blanco);
+    background-color: inherit;
+}
+
+
+.login__cuadro--img {
+    text-align: left;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.8rem;
+}
+
+
+

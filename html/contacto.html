@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../styles/style1.css">
+    <link rel="stylesheet" href="../styles/styleContacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <input type="checkbox" class="checkbox">
+        <a class="header__logo" href="../index.html">
+            <img width="130" src="../img/RUEDAMOTOS.png" alt="">
+        </a>
+        <img class="menu menu-hamburguesa" src="../img/menu.png" alt="">
+        <img class="menu menu-x" src="../img/close.png" alt="">
+            <nav class="enlaces">
+                <a href="../html/marcas.html" >Marcas</a>
+                <a href="../html/contacto.html" >Contacto</a>
+                <a href="../html/nosotros.html">Nosotros</a>
+                <a class="profile border" href="../html/login.html">
+                    Iniciar Sesión <img class="profile__img" width="20" src="../img/profile-user.png" alt="">
+                </a>
+            </nav>
+    </header>
+
+    <h2 class="titulo">Contáctanos</h2>
+    <main class="main">
+        <form class="contacto">
+            <label for="name">Nombre</label>
+            <input required class="contacto__input" id="name" type="text" placeholder="Nombre completo">
+            
+            <label for="mail">Mail</label>
+            <input required class="contacto__input" id="mail" type="email" placeholder="Correo electrónico">
+            
+            <label for="cel">Celular</label>
+            <input required class="contacto__input" id="cel" type="tel" placeholder="Tu número de celular">
+            
+            <label for="modelo">Modelo Interesado</label>
+            <input required class="contacto__input" id="modelo" type="text" placeholder="Modelo">
+            
+            <label for="msj">Mensaje</label>
+            <textarea class="contacto__input" id="msj" placeholder="Mensaje (opcional)"></textarea>
+            
+            <input class="botonForm" type="submit" placeholder="Enviar">
+        </form>
+
+        <div class="ubicacion">
+            <div>
+                <h3 class="titulo">Donde encontrarnos</h3>
+                <div class="ubicacion__texto">
+                    <img width="30" src="../img/location.png" alt="">
+                    <p>Av. Belgrano 812</p>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1128.4744533403382!2d-64.2484230741055!3d-27.738313464654446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b53de986995df%3A0xa473324d1d44241a!2sAv.%20Belgrano%20812%2C%20La%20Banda%2C%20Santiago%20del%20Estero!5e0!3m2!1ses-419!2sar!4v1698852525241!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="enlaces__texto">
+            <a href="nosotros.html">Acerca de Rueda Motos</a>
+            <a href="contacto.html">Contáctanos</a>
+            <a href="#">Trabaja con nosotros</a>
+            <a href="#">Preguntas Frecuentes</a>
+        </div>
+        <div class="enlaces__redes">
+            <a href="#">
+                <img class="enlaces__redes--img" src="../img/instagram.svg" alt="">
+            </a>
+            <a href="#">
+                <img class="enlaces__redes--img" src="../img/facebook.svg" alt="">
+            </a>
+            <a href="#">
+                <img class="enlaces__redes--img" src="../img/whatsapp.svg" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

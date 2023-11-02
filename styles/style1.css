@@ -1,0 +1,342 @@
+:root {
+    --negro: #001514;
+    --blanco: #FBFFFE;
+    --azulFuerte: #46B1C9;
+    --azulClaro: #84C0C6;
+    --gris: #9FB7B9;
+    --grisFondo: #BCC1BA;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 7%, rgba(195,195,195,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: var(--negro);
+    text-transform: uppercase;
+}
+
+/* Header */ 
+.header {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--azulFuerte);
+    padding: 0.5rem;
+}
+
+.header__logo {
+    margin: 0;
+}
+
+.profile {
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.checkbox, .menu {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu {
+    pointer-events: none;
+    width: 33px;
+    height: 33px;
+}
+
+.checkbox {
+    opacity: 0;
+}
+.menu-x {
+    display: none;
+}
+
+.checkbox:checked ~ .menu-hamburguesa {
+    display: none;
+}
+.checkbox:checked ~ .menu-x {
+    display: block;
+}
+
+.enlaces {
+    background-color: var(--azulFuerte);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 65.5px;
+    display: none;
+}
+
+.enlaces a {
+    padding: .6rem 1rem;
+    margin: 0;
+    color: var(--negro);
+    transition: .4s;
+}
+
+.enlaces a:hover {
+    background: var(--gris);
+    color: var(--blanco);
+}
+.checkbox:checked ~ .enlaces {
+    transition: .5;
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .header {
+        position: static;
+    }
+    .border {
+        border-left: 1px solid var(--negro);
+    }
+    .enlaces {
+        display: flex;
+        flex-direction: row;
+        top: auto;
+        align-items: center;
+        width: auto;
+        gap: 1rem;
+        height: 6px;
+        margin-right: .5rem;
+    }
+
+    .enlaces a:hover {
+        transition: color .2s linear;
+        background-color: inherit;
+        color: var(--blanco);
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 1rem;
+        gap: .5rem;
+    }
+}
+
+/* Main - Portada */
+
+.bg-main {
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(../img/portada2.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 43rem;
+}
+
+.main__info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 43rem;
+}
+
+.main__info--texto {
+    margin: 0 0 2rem 0;
+    color: var(--gris);
+    
+}
+
+.main__info--boton {
+    transition: .2s;
+    background-color: var(--azulFuerte);
+    font-weight: bold;
+    padding: .5rem;
+    border-radius: 2rem;
+    width: 14rem;
+    align-self: center;
+    border: 3px solid var(--azulFuerte);
+}
+
+.main__info--boton:hover {
+    background-color: inherit;
+    transition: .2s;
+    color: var(--blanco);
+    border: 3px solid var(--azulFuerte);
+}
+
+/* Galeria Motos */
+
+.seccion-motos {
+    text-align: center;
+}
+
+.galeria__motos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria__motos--mono {
+    border-radius: 1rem;
+    text-align: center;
+    background-color: var(--blanco);
+    margin-bottom: 2rem;
+    transition: all .2s;
+}
+
+.galeria__motos--mono:hover {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.galeria__motos--img {
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: 1px solid var(--grisFondo);
+}
+
+.galeria__motos--mono > p, h5, a {
+    margin: .7rem 0;
+}
+.galeria__motos--mono > h5{
+    color: #3ab336;
+}
+
+.galeria__motos--datos {
+    display: flex;
+    color: var(--grisFondo);
+    font-size: 1.2rem;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.galeria__motos--precio {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+}
+
+@media (min-width: 480px) {
+    .galeria__motos {
+        display: grid;
+        grid-template-columns: repeat(2, 190px);
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 720px) {
+    .galeria__motos {
+        grid-template-columns: repeat(3, 190px);
+    }
+    
+    .galeria__grid {
+        grid-column: 3;
+    }
+}
+
+@media (min-width: 920px) {
+    .galeria__motos {
+        grid-template-columns: repeat(4, 190px);
+    }
+    .galeria__grid {
+        grid-column: 4;
+    }
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 1.5rem;
+    background-color: var(--azulFuerte);
+    margin-top: auto;
+}
+
+.enlaces__texto {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.enlaces__texto a {
+    padding: 1rem 0;
+    width: 100%;
+    margin: 0;
+    color: var(--negro);
+    transition: .4s;
+}
+
+.enlaces__texto a:hover {
+    background-color: var(--gris);
+    color: var(--blanco);
+}
+
+
+.enlaces__redes {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.enlaces__redes--img {
+    width: 2.5rem;
+}
+
+@media (min-width: 920px) {
+    .footer {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .enlaces__texto {
+        flex-direction: row;
+        gap: 2rem;
+        font-size: 1.2rem;
+        padding-left: 1.5rem;
+    }
+
+    .enlaces__texto a {
+        width: auto;
+    }
+
+    .enlaces__texto a:hover {
+        background-color: inherit;
+    }
+
+    .enlaces__redes {
+        justify-content: center;
+        gap: 2rem;
+        margin-right: 3rem;
+    }
+    .enlaces__redes--img {
+        width: 2.2rem;
+    }
+}
